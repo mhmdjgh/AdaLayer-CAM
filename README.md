@@ -1,3 +1,4 @@
+# AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs
 ## Demo
 
 Experience the AdaLayer-CAM pipeline in an interactive Google Colab notebook.
@@ -16,5 +17,5 @@ Experience the AdaLayer-CAM pipeline in an interactive Google Colab notebook.
 </p>
 
 
-# AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs
+
 coming soon...
