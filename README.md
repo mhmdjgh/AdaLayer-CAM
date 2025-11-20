@@ -12,7 +12,6 @@ Experience the AdaLayer-CAM pipeline in an interactive Google Colab notebook.
 
 <p align="center">
   <img src="images/image1.png" width="28%">
-  <img src="images/image2.jpg" width="28%">
   <img src="images/image3.png" width="28%">
 </p>
 
