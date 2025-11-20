@@ -8,5 +8,14 @@ Experience the AdaLayer-CAM pipeline in an interactive Google Colab notebook.
   )
   
 
+## Example Results
+
+<p align="center">
+  <img src="images/image1" width="28%">
+  <img src="images/image2" width="28%">
+  <img src="images/image3" width="28%">
+</p>
+
+
 # AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs
 coming soon...
