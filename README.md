@@ -33,20 +33,18 @@ If you use this work, please cite:
 
 ```bibtex
 @article{GhaderiPoor2025AdaLayerCAM,
-  title={AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs},
-  author={GhaderiPoor, MohammadJavad and PourMohammadBagher, Latifeh and Rahimi, Zahra},
-  year={2025},
-  journal={...}
+  title     = {AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs},
+  author    = {GhaderiPoor, MohammadJavad and PourMohammadBagher, Latifeh and Rahimi, Zahra},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year      = {2025},
+  pages     = {...},
 }
+
 ```
 
 ---
 
-## 📄 License
 
-MIT License.
-
----
 
 ## 📬 Contact
 
@@ -63,5 +61,3 @@ For questions or collaborations:
 </p>
 
 
-
-coming soon...
