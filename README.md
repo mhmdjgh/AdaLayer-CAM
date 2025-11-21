@@ -31,6 +31,7 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
 ## Example Results
 
 <p align="center">
+  <img src="images/image2.png" width="28%">
   <img src="images/image1.png" width="28%">
   <img src="images/image3.png" width="28%">
 </p>
