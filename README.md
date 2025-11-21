@@ -3,10 +3,9 @@
 This repository contains the official implementation of the paper:
 "AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs".
 
-
 # AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs
 
-This repository contains the **official PyTorch implementation** of the paper:
+This repository provides the **official PyTorch implementation** of the paper:
 
 **"AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs"**  
 M. J. GhaderiPoor, L. PourMohammadBagher, Z. Rahimi  
@@ -14,44 +13,50 @@ M. J. GhaderiPoor, L. PourMohammadBagher, Z. Rahimi
 
 ---
 
-## Run the demo
+## 🚀 Run the Demo (Google Colab)
 
-To quickly test AdaLayer-CAM in your browser using Google Colab:
+The simplest way to try AdaLayer-CAM is through Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
 https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/notebooks/AdaLayerCAM_Demo.ipynb
 )
 
-*(لینک را بعداً با لینک واقعی نوت‌بوک خودت جایگزین کن.)*
+*(Replace `<your-username>` and the notebook path once your repository is live.)*
 
 ---
 
-## Overview
+## 📘 Overview
 
-AdaLayer-CAM یک روش **کامل چندلایه‌ای** برای تولید Class Activation Map در شبکه‌های کانولوشنی است.  
-این روش برخلاف Grad-CAM یا LayerCAM تنها از یک یا چند لایه استفاده نمی‌کند، بلکه:
+**AdaLayer-CAM** is a fully multi-layer Class Activation Map (CAM) method designed to produce **cleaner, sharper, and more reliable** visual explanations for CNN-based models.
 
-- از **تمام** لایه‌های کانولوشنی استفاده می‌کند،
-- برای هر لایه وزن تطبیقی مبتنی بر **activation energy** محاسبه می‌کند،
-- خروجی‌ها را با یک **Soft-ReLU fusion** ترکیب می‌کند،
-- و در نتیجه نقشه‌های توجه **شفاف‌تر، دقیق‌تر و کم‌نویزتر** تولید می‌کند.
+Unlike Grad-CAM or LayerCAM, AdaLayer-CAM:
 
-این مخزن شامل پیاده‌سازی کامل، اسکریپت‌های آزمایش، و نوت‌بوک Colab است.
+- Utilizes **all convolutional layers** (not just one or a few)
+- Computes **activation-energy-based adaptive layer weights**
+- Fuses per-layer CAMs through a stable **Soft-ReLU (sigmoid) fusion**
+- Produces high-quality CAMs with reduced noise and improved object localization
 
----
-
-## Features
-
-- ✔ Fully multi-layer CAM (استفاده از *تمام* لایه‌های کانولوشنی)
-- ✔ Adaptive weighting based on activation energy
-- ✔ Soft-ReLU fusion for stable and less noisy CAMs
-- ✔ PyTorch implementation (plug-and-play)
-- ✔ Scripts for reproducing ImageNet & Pascal VOC results
-- ✔ Google Colab demo
+This implementation includes:
+- Core AdaLayer-CAM modules  
+- Baseline methods (Grad-CAM, Grad-CAM++, Score-CAM, LayerCAM)  
+- Evaluation scripts  
+- Visualization utilities  
+- A Colab demo notebook  
 
 ---
 
-## Installation
+## ✨ Features
+
+- Fully multi-layer CAM aggregation  
+- Adaptive per-layer weighting using activation energy  
+- Soft-ReLU fusion for stable and noise-resistant heatmaps  
+- Plug-and-play PyTorch implementation  
+- Preconfigured scripts for ImageNet and Pascal VOC  
+- Colab-ready example notebook  
+
+---
+
+## 📦 Installation
 
 ### 1. Clone the repository
 
@@ -66,7 +71,7 @@ cd AdaLayer-CAM
 pip install -r requirements.txt
 ```
 
-Minimal dependencies:
+Minimum dependencies:
 
 ```
 torch>=2.0
@@ -80,7 +85,7 @@ tqdm
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 A minimal working example:
 
@@ -90,23 +95,32 @@ import torchvision.models as models
 from src.adalayer_cam.adalayer_cam import AdaLayerCAM
 from src.utils.visualization import visualize_cam_on_image
 
+# Load a pretrained model
 model = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V1)
 model.eval()
 
-adalayer = AdaLayerCAM(model=model, target_layers="all")
+# Initialize AdaLayer-CAM (all convolutional layers)
+adalayer_cam = AdaLayerCAM(model=model, target_layers="all")
 
-img = ...  # preprocessed input
-cam = adalayer(img, target_class=None)
+# Your input tensor (1 × 3 × H × W) normalized for ImageNet
+input_tensor = ...
 
-out = visualize_cam_on_image(img, cam)
-out.save("result.png")
+# Compute CAM (target_class=None → uses predicted class)
+cam_map = adalayer_cam(input_tensor, target_class=None)
+
+# Visualize CAM overlay
+output_img = visualize_cam_on_image(input_tensor, cam_map)
+output_img.save("adalayer_cam_result.png")
 ```
 
-نسخه کامل‌تر در پوشه examples و نوت‌بوک Colab موجود است.
+More examples are available in:
+
+- `examples/simple_inference.py`
+- `notebooks/AdaLayerCAM_Demo.ipynb`
 
 ---
 
-## Directory Structure
+## 📁 Project Structure
 
 ```
 AdaLayer-CAM/
@@ -114,10 +128,10 @@ AdaLayer-CAM/
 ├── src/
 │   ├── adalayer_cam/
 │   │   ├── adalayer_cam.py
-│   │   ├── layer_cam.py
+│   │   ├── cam_base.py
 │   │   ├── grad_cam.py
 │   │   ├── score_cam.py
-│   │   └── cam_base.py
+│   │   └── layer_cam.py
 │   └── utils/
 │       ├── visualization.py
 │       ├── metrics.py
@@ -144,33 +158,35 @@ AdaLayer-CAM/
 
 ---
 
-## Reproducing Results
+## 📊 Reproducing Experimental Results
 
-### 1. Set dataset paths  
-در فایل‌های config قرار داده شده در پوشه:
+### 1. Configure dataset paths
+Modify the config files located in:
 
 ```
 experiments/configs/
 ```
 
-### 2. Run experiments
+### 2. Run ImageNet evaluation
 
 ```bash
 python experiments/run_imagenet.py \
-    --config experiments/configs/resnet50_imagenet.yaml \
-    --method adalayer_cam
+  --config experiments/configs/resnet50_imagenet.yaml \
+  --method adalayer_cam
 ```
 
-Metrics included:
+### Implemented metrics
 
-- Average Drop (%)
-- Insertion AUC
-- Deletion AUC
-- Pointing Game accuracy
+- Average Drop (%)  
+- Insertion AUC  
+- Deletion AUC  
+- Pointing Game accuracy  
 
 ---
 
-## Citation
+## 📝 Citation
+
+If you use this work, please cite:
 
 ```bibtex
 @article{GhaderiPoor2025AdaLayerCAM,
@@ -183,19 +199,20 @@ Metrics included:
 
 ---
 
-## License
+## 📄 License
 
 MIT License.
 
 ---
 
-## Contact
+## 📬 Contact
+
+For questions or collaborations:
 
 - **MohammadJavad GhaderiPoor** — mohammadjavadghaderipoor@gmail.com  
 - **Latifeh PourMohammadBagher** — l_pmb@atu.ac.ir  
 - **Zahra Rahimi** — za.rah@atu.ac.ir
 
-  
 
 ## Example Results
 
