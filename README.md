@@ -47,7 +47,7 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
   <img src="images/spider1_heatmap.png" width="75%">
   <img src="images/spider2_heatmap.png" width="75%">
 </p>
----
+
 
 
 
