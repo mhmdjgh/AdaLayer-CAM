@@ -49,7 +49,7 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
 </p>
 
 
-
+---
 
 ## 📝 Citation
 
