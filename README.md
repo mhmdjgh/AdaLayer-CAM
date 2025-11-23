@@ -31,8 +31,8 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
 ## Example Results
 
 <p align="center">
-  <img src="images/crab_convs.png" width="85%">
-  <img src="images/crab_heatmap.png" width="85%">
+  <img src="images/crab_convs.png" width="80%">
+  <img src="images/crab_heatmap.png" width="80%">
 </p>
 
 <p align="center">
