@@ -1,7 +1,6 @@
 # AdaLayer-CAM
 
 This repository contains the official implementation of the paper:
-
 **"AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs"**  
 M. J. GhaderiPoor, L. PourMohammadBagher, Z. Rahimi  
 
