@@ -37,10 +37,10 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
   <img src="images/wild_goat_convs.png" width="100%">
   <img src="images/wild_goat_heatmap.png" width="100%">
  ---
-  <img src="device_heatmap.png" width="50%">
-  <img src="seal_heatmap.png" width="50%">
-  <img src="images/wild_goat_heatmap.png" width="50%">
-  <img src="images/wild_goat_heatmap.png" width="50%">
+  <img src="images/device_heatmap.png" width="50%">
+  <img src="images/seal_heatmap.png" width="50%">
+  <img src="images/spider1_heatmap.png" width="50%">
+  <img src="images/spider2_heatmap.png" width="50%">
 </p>
 
 ---
