@@ -33,8 +33,8 @@ https://colab.research.google.com/github/<your-username>/AdaLayer-CAM/blob/main/
 <p align="center">
   <img src="images/crab_convs.png" width="100%">
   <img src="images/crab_heatmap.png" width="100%">
-  <img src="images/wild_goat_convs.png" width="60%">
-  <img src="images/wild_goat_heatmap.png" width="50%">
+  <img src="images/wild_goat_convs.png" width="100%">
+  <img src="images/wild_goat_heatmap.png" width="100%">
 </p>
 
 ---
