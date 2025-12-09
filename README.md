@@ -57,9 +57,9 @@ If you use this work, please cite:
 @article{GhaderiPoor2025AdaLayerCAM,
   title     = {AdaLayer-CAM: Adaptive Multi-Layer Method for Visualization and Explanation of CNNs},
   author    = {GhaderiPoor, MohammadJavad and PourMohammadBagher, Latifeh and Rahimi, Zahra},
-  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  booktitle = {},
   year      = {2025},
-  pages     = {...},
+  pages     = {},
 }
 
 ```
