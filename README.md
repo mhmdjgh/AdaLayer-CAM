@@ -43,6 +43,7 @@ The simplest way to try AdaLayer-CAM is through Google Colab:
   <img src="images/output/device_heatmap.png" width="75%">
   <img src="images/output/seal_heatmap.png" width="75%">
   <img src="images/output/spider1_heatmap.png" width="75%">
+ <img src="images/output/bike_heatmap.png" width="75%">
   <img src="images/output/spider2_heatmap.png" width="75%">
 </p>
 
