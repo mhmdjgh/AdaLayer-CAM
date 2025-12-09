@@ -8,11 +8,8 @@ M. J. GhaderiPoor, L. PourMohammadBagher, Z. Rahimi
 
 ---
 
-## 🚀 Run the Demo (Google Colab)
-
-The simplest way to try AdaLayer-CAM is through Google Colab:
-
 # 🚀 Run AdaLayer-CAM in Google Colab
+The simplest way to try AdaLayer-CAM is through Google Colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mhmdjgh/AdaLayer-CAM/blob/main/AdaLayer_CAM.ipynb)
 
 
